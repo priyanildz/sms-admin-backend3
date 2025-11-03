@@ -82,7 +82,7 @@ app.use(cors({
 // for body data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(authMiddleware) //check auth
+// app.use(authMiddleware) //check auth
 
 app.use("/api", routes) //all routes (entry point)
 
