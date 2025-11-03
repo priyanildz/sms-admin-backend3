@@ -86,11 +86,14 @@ app.use(authMiddleware) //check auth
 
 app.use("/api", routes) //all routes (entry point)
 
-const startServer = async() =>{
-  // This connects to MongoDB using the MONGO_URI loaded above
-  await connectDB();
-  app.listen(5000,()=>{
-    console.log("Server Started at 5000")
-  })
-}
-startServer();
+// const startServer = async() =>{
+//   // This connects to MongoDB using the MONGO_URI loaded above
+//   await connectDB();
+//   app.listen(5000,()=>{
+//     console.log("Server Started at 5000")
+//   })
+// }
+// startServer();
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
