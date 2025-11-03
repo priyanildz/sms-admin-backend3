@@ -83,7 +83,9 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(authMiddleware) //check auth
-
+app.get("/", (req, res) => {
+  return res.status(200).json({status:'Ok!'})
+});
 app.use("/api", routes) //all routes (entry point)
 
 // const startServer = async() =>{
